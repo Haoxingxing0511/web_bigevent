@@ -1,0 +1,15 @@
+#suggest-list {
+	border: 1px solid #ccc;
+	display: none;
+}
+
+.suggest-time {
+	line-height: 30px;
+	padding-left: 5px;
+	
+}
+
+.suggest-time:hover {
+	cursor: pointer;
+	background-color: #eee;
+}

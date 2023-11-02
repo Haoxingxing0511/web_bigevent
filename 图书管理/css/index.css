@@ -1,0 +1,11 @@
+body {
+    padding: 15px;
+}
+ 
+.list-group-item span:first-child {
+    background-color: #5bc0de;
+}
+ 
+.list-group-item span:last-child {
+    background-color: #f0ad4e;
+}

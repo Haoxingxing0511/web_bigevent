@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			// 1.新建 FormData 对象
+			var fd = new FormData ()
+			// 2.为 FormData 添加表单项 1对1对的加
+			fd.append('uname', 'zs')
+			
+			// 3.创建 XHR
+			var xhr = new XMLHttpRequest()
+			
+			// 设置超时时间
+			xhr.timeout = 3000
+			// 设置超时以后的处理函数
+			xhr.ontimeout = function () {
+				console.log('请求超时了!');
+			}
+			//4.指定请求类型与URL地址
+			xhr.open('GET','http://')
+			// 5.直接提交 FormData 对象
+			xhr.send(fd)
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					console.log(xhr.responseText);
+				}
+			}
+		</script>
+	</body>
+</html>

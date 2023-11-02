@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		
+		<script>
+			// 创建 XHR 对象
+			var xhr = new XMLHttpRequest()
+			// 调用 open 函数
+			xhr.open('POST','http://www')
+			// 调用 send 函数
+			xhr.send()
+			// 监听  onreadystatechange 事件
+			xhr.onreadystatechange = function () {
+				if (xhr.readyState === 4 && xhr.status === 200) {
+					// 获取服务器响应
+					console.log(xhr.responseText)
+				}
+			}
+			
+			//传参
+			$.get('http://wwwbaidu.com?id=1$user')
+			$.get('',{id:1,user:})
+			$.ajax({
+				method:'GET',
+				url:'',
+				data:{
+					id:1,
+					user:''
+				},
+				success: function (res) {
+					console.log(res);
+				}
+				
+			})
+		</script>
+	</body>
+</html>

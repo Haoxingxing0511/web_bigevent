@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./css/index.css">
+		<link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+		<title></title>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		    <!--评论面板-->
+		    
+		    <div class="panel panel-primary">
+		          <div class="panel-heading">
+		                <h3 class="panel-title">发表评论</h3>
+		          </div>
+		          <form class="panel-body" id="formAddCmt">
+		               <div>评论人：</div>
+		               <input type="text" class="form-control" name="username">
+		               <div>评论内容：</div>
+		               <textarea class="form-control" name="content"></textarea>
+					   
+		               <button type="submit"  class="btn btn-primary">发表评论</button>
+		          </form>
+		    </div>
+		    
+		 
+		    <!-- 评论列表 -->
+		    
+		    <ul class="list-group" id="cmt-list">
+		        <li class="list-group-item">
+		            <span class="badge">评论时间：</span>
+		            <span class="badge">评论人：</span>
+		            Item 1
+		        </li>
+		    </ul>
+			
+			<script src="js/cmt.js"></script>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<input type="file" id="file1">
+		<button id="btnUpload">上传文件</button>
+		
+		<br/>
+		<img src="" alt="" style="display: none;" id="loading">
+		
+		
+		<script>
+			$(function() {
+				// 监听到AJAX被发起就把隐藏的图片显示出来
+				$(document).ajaxStart(function (){
+					$('#loading').show()
+				})
+				
+				// 监听到AJAX结束就把的显示图片隐藏起来
+				$(document).ajaxStop(function (){
+					$('#loading').hide()
+				})
+				
+				
+				$('#btnUpload').on('click', function() {
+					var files= $('#file1')[0].files
+					if(files.length <= 0) {
+						return alert('请选择文件后在上传！')
+					}
+					console.log('上传完成！');
+				})
+			})
+			$.ajax({
+				method: 'POST',
+				url:'',
+				data fd,
+				// 不修改 content-Type 属性，使用 FormData 默认的 contentType 值
+				contentType:false,
+				// 不对 FormData 中的数据进行 url 编码，而是将 FormData 数据原样发送到服务器
+				processData: false,
+				success: function(res) {
+					console.log(res);
+				}
+			})
+		</script>
+	</body>
+</html>

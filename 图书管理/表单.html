@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<form action="" id="f1">
+			<input type="text" name="username" >
+			<input type="password" name="password">
+			<button type="submit">提交</button>
+		</form>
+		
+		<script>
+			$(function () {
+				// 用ajax监听表单提交事件
+				$('f1').submit(function (e) {
+					// 取消提交后的页面跳转
+					e.preventDefault()
+					// 快速获取表单中的数据
+					var data = $(this).serialize()
+					console.log(data);
+				})
+				// 快速获取表单中的数据
+				//$('#f1').serialize()
+			})
+		</script>
+	</body>
+</html>

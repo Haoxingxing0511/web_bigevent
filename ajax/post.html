@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<button id="btnPOST">发起POST请求</button>
+	</body>
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script>	
+		//不带参数的GET请求			
+		$(function() {
+			$('#btnPOST').on('click', function () {
+				$.post('https://www.liulongbin.top:3006/api/addbook',{booknname: '设置', author:'学校',publisher: '上海'}, function(res) {
+				console.log(res);	
+				})
+			})
+		})
+	</script>
+</html>

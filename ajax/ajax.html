@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<button id="btnPOST">发起POST请求</button>
+	</body>
+	<script src="./js/jquery-3.2.1.min.js"></script>
+	<script>	
+		//AJAX请求			
+		$(function() {
+			$('#btnPOST').on('click', function () {
+				$.ajax({
+					type:'', // 请求方式
+					url:'',//请求url地址
+					data:{},//这次请求要带的数据
+					success: function(res){ //请求成功之后的回调函数
+						
+					}
+				})
+			})
+		})
+	</script>
+</html>

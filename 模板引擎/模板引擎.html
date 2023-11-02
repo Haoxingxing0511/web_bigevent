@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="template-web.js"></script>
+		<script src="../js/jquery-3.2.1.min.js"></script>
+		<title></title>
+	</head>
+	<body>
+		
+		<div id="container">
+			
+			<!-- {{if flag ===0}}
+			flag的值是0
+			{{/if}}
+			{{else if flag ===1}}
+			flag的值是0
+			{{/if}} -->
+			
+			<!-- 循环 -->
+			<!-- {{each xx}}{{/each}} -->
+			
+			<!-- 管理器 -->
+			<!-- <h3>注册时间：{{regTime | filterName}}{{value | filterName}}</h3> -->
+		</div>
+		
+		<!-- 模板 -->
+		<script type="text/html" id="tpl-user">
+			<!-- <h1>{{name}}</h1> -->
+			
+			<h3>{{regTime | filterName}}{{value | filterName}}</h3>
+			
+		</script>
+		
+		<script>
+			var data= {
+				name:'zs',
+				flag:0,
+				xx:['sdfds','sdf'],
+				regTime: new Date()
+			}
+			
+			// 定义过滤器
+			//template.defaults.imports.filterName = function(data){/*return处理的结果*/}
+			template.defaults.imports.filterName = function(date){
+				var y = date.getFullYear()
+				var m = date.getMonth() + 1
+				var d = date.getDate()
+				console.log(date);
+				
+				return y + '-' + m + '-' + d //管理器最后一定要 return 一个值
+			}
+			
+			// 调用template
+			var htmlStr = template('tpl-user',data)
+			console.log(htmlStr);
+			// 渲染html结构
+			$('#container').html(htmlStr)
+		</script>
+	</body>
+</html>
