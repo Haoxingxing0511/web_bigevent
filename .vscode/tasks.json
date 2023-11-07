@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "install",
+			"path": "jquery-ui-1.13.2.custom",
+			"group": "clean",
+			"problemMatcher": [],
+			"label": "npm: install - jquery-ui-1.13.2.custom",
+			"detail": "install dependencies from package"
+		}
+	]
+}
