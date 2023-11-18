@@ -1,5 +1,3 @@
-const layui = require("../lib/layui/layui.js")
-const layer = require("../lib/layui/layui.js")
 
 $(function() {
     var form = alyui.form
